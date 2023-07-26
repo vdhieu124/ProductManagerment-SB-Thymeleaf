@@ -1,6 +1,6 @@
-package com.vietcodedi.onlineshopping.repository;
+package com.multicampus.demospringthymeleaf.repositories;
 
-import com.vietcodedi.onlineshopping.model.Product;
+import com.multicampus.demospringthymeleaf.models.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -11,13 +11,11 @@ import java.util.stream.Collectors;
 public class ProductRepository {
     private List<Product> list = new ArrayList<Product>(); //Dong vai tro thay the CSDL
 
-    public void createProducts() { //Khoi tao Danh sach voi 3 Product mau
-        list = List.of(
-                new Product(1, "product 1", 10, 1000),
-                new Product(2, "product 2", 20, 2000),
-                new Product(3, "product 3", 30, 3000)
-        );
+    public ProductRepository() {
+        list.add(new Product(1, "product 1", 10, 1000));
+        list.add(new Product(2, "product 2", 20, 2000));
     }
+
 
     public List<Product> getAllProducts() { //Ham lay ra toan bo Du lieu tu Danh sach
         return list;

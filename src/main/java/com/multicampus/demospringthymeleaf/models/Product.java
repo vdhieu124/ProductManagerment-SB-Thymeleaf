@@ -1,4 +1,4 @@
-package com.vietcodedi.onlineshopping.model;
+package com.multicampus.demospringthymeleaf.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,5 +12,4 @@ public class Product {
     private String name;
     private int quantity;
     private double price;
-
 }

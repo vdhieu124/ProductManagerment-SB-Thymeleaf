@@ -1,7 +1,7 @@
-package com.vietcodedi.onlineshopping.service;
+package com.multicampus.demospringthymeleaf.services;
 
-import com.vietcodedi.onlineshopping.model.Product;
-import com.vietcodedi.onlineshopping.repository.ProductRepository;
+import com.multicampus.demospringthymeleaf.models.Product;
+import com.multicampus.demospringthymeleaf.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +12,6 @@ public class ProductService {
     @Autowired
     private ProductRepository repository; //Tiem ProductRepo
 
-    public void initialList(){
-        repository.createProducts();
-    }
     public Product saveProduct(Product product) {
         return repository.save(product);
     }
